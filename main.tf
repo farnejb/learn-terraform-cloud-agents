@@ -8,7 +8,10 @@ terraform {
   required_version = ">= 0.13"
 }
 
-# provider "docker" {}
+provider "docker" {
+  # host    = "npipe:////.//pipe//docker_engine"
+  host = "tcp://127.0.0.1:2375/"
+}
 
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
