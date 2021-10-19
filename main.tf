@@ -4,5 +4,5 @@ terraform {
 
 resource "local_file" "foo" {
     content     = "foo!"
-    filename = "~/foo.bar"
+    filename = "/home/ubuntu/foo.bar"
 }
